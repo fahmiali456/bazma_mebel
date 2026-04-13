@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Dashboard</a>
                     </li>
                     <li><a class="nav-link" href="shop.html">Shop</a></li>
                     <li><a class="nav-link" href="about.html">About us</a></li>
@@ -423,7 +423,7 @@
                         <a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image"
                                 class="img-fluid"></a>
                         <div class="post-content-entry">
-                            <h3><a href="#">First Time Home Owner Ideas</a></h3>
+                            <h3><a href="#">First Time Dashboard Owner Ideas</a></h3>
                             <div class="meta">
                                 <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19,
                                         2021</a></span>

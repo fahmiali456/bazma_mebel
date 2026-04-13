@@ -28,52 +28,8 @@
 <body>
 
 
-    <!-- Start Header/Navigation -->
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsFurni">
-                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
-                    </li>
-
-                    <li class="nav-item {{ request()->routeIs('shop') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('shop') }}">Shop</a>
-                    </li>
-                    <li class="nav-item {{ request()->routeIs('about') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
-                    </li>
-                    <li class="nav-item {{ request()->routeIs('services') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('services') }}">Services</a>
-                    </li>
-                    <li class="nav-item {{ request()->routeIs('blog') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('blog') }}">Blog</a>
-                    </li>
-                    <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact us</a>
-                    </li>
-                </ul>
-
-                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li class="nav-item {{ request()->routeIs('login') ? 'active' : '' }}"><a class="nav-link"
-                            href="{{ route('login') }}"><img src="images/user.svg"></a></li>
-                    <li class="nav-item {{ request()->routeIs('cart') ? 'active' : '' }}"><a class="nav-link"
-                            href="{{ route('cart') }}"><img src="images/cart.svg"></a></li>
-                </ul>
-            </div>
-        </div>
-
-    </nav>
-    <!-- End Header/Navigation -->
-
+    @include('partials.navbar')
     <!-- Start Hero Section -->
     <div class="hero">
         <div class="container">
@@ -83,7 +39,7 @@
                         <h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
                         <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
                             vulputate velit imperdiet dolor tempor tristique.</p>
-                        <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
+                        <p><a href="{{ route('shop') }}" class="btn btn-secondary me-2">Shop Now</a><a href="#"
                                 class="btn btn-white-outline">Explore</a></p>
                     </div>
                 </div>
@@ -97,6 +53,7 @@
     </div>
     <!-- End Hero Section -->
 
+
     <!-- Start Product Section -->
     <div class="product-section">
         <div class="container">
@@ -107,13 +64,13 @@
                     <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
                     <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
                         vulputate velit imperdiet dolor tempor tristique. </p>
-                    <p><a href="shop.html" class="btn">Explore</a></p>
+                    <p><a href="{{ route('shop') }}" class="btn">Explore</a></p>
                 </div>
                 <!-- End Column 1 -->
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="{{ route('cart') }}">
                         <img src="images/product-1.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Nordic Chair</h3>
                         <strong class="product-price">$50.00</strong>
@@ -127,7 +84,7 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="{{ route('cart') }}">
                         <img src="images/product-2.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Kruzo Aero Chair</h3>
                         <strong class="product-price">$78.00</strong>
@@ -141,7 +98,7 @@
 
                 <!-- Start Column 4 -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="{{ route('cart') }}">
                         <img src="images/product-3.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Ergonomic Chair</h3>
                         <strong class="product-price">$43.00</strong>
@@ -569,7 +526,7 @@
                 <div class="row pt-4">
                     <div class="col-lg-6">
                         <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>
-                            document.write(new Date().getFullYear());
+                                document.write(new Date().getFullYear());
                             </script>. All Rights Reserved. &mdash; Designed with love by <a
                                 href="https://untree.co">Untree.co</a> Distributed By <a
                                 hreff="https://themewagon.com">ThemeWagon</a>
@@ -591,6 +548,7 @@
     </footer>
     <!-- End Footer Section -->
 
+    @include('partials.whatsapp')
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
